@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dde0w6kq1a6xi"]
+
+[ext_resource type="PackedScene" uid="uid://cocivu3a3ggon" path="res://models/building/wall_doorway.glb" id="1_0upv6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucsjy"]
+size = Vector3(1, 4.1, 1.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0upv6"]
+size = Vector3(1, 4.1, 1.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob5gy"]
+size = Vector3(1.9, 1, 1.2)
+
+[node name="walldoorway" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.15, -0.25)
+shape = SubResource("BoxShape3D_ucsjy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 2.15, -0.25)
+shape = SubResource("BoxShape3D_0upv6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0500001, 3.7, -0.2)
+shape = SubResource("BoxShape3D_ob5gy")
+
+[node name="wall_doorway2" parent="." instance=ExtResource("1_0upv6")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1, 2.98023e-08)
+visible = false
+operation = 2
+size = Vector3(1.8, 3, 1)

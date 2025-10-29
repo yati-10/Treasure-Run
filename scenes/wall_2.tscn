@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://hmmw75d4l76j"]
+
+[ext_resource type="PackedScene" uid="uid://vmyrnpu3wo3" path="res://models/building/wall.glb" id="1_1yxst"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r008a"]
+size = Vector3(3.8, 4, 1.2)
+
+[node name="wall2" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 2.1, 2.23517e-08)
+shape = SubResource("BoxShape3D_r008a")
+
+[node name="wall2" parent="." instance=ExtResource("1_1yxst")]

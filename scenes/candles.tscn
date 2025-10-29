@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqlia7uedqpto"]
+
+[ext_resource type="PackedScene" uid="uid://qptwo1hg20jx" path="res://models/props/candles.glb" id="1_qv8yp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_clkal"]
+height = 1.4
+
+[node name="candles" type="StaticBody3D"]
+
+[node name="candles" parent="." instance=ExtResource("1_qv8yp")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, -0.2)
+shape = SubResource("CapsuleShape3D_clkal")
